@@ -34,9 +34,37 @@ public class TwoIntegers
 		int sum = number1 + number2;
 		int product = number1 * number2;
 		int difference = number1 - number2;
-		double qoutient = (double)number1 / number2;
+		double quotient = (double)number1 / number2;
 		int mod = number1 % number2;
 		
-		return (number1 + " + " + number2 + " = " + sum)
+		return (number1 + " + " + number2 + " = " + sum + "," +
+				number1 + " * " + number2 + " = " + product + "," +
+				number1 + " - " + number2 + " = " + difference + "," +
+				number1 + " / " + number2 + " = " + quotient + "," +
+				number1 + " % " + number2 + " = " + mod + ",");
+		
+	}
+	public int larger()
+	{
+		if (number1 <= number2)
+		{
+			return number2;
+		}
+		else
+		{
+			return number1;
+		}
+	}
+	public boolean isEven()
+	{
+		if ((number1 + number2) % 2 == 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
 	}
 }
