@@ -29,7 +29,7 @@ public class TwoIntegers
 	{
 		this.number2 = number2;
 	}
-	public String arithmetic()
+	public String arithmetic(int number1, int number2)
 	{
 		int sum = number1 + number2;
 		int product = number1 * number2;
@@ -37,11 +37,11 @@ public class TwoIntegers
 		double quotient = (double)number1 / number2;
 		int mod = number1 % number2;
 		
-		return (number1 + " + " + number2 + " = " + sum + "," +
-				number1 + " * " + number2 + " = " + product + "," +
-				number1 + " - " + number2 + " = " + difference + "," +
-				number1 + " / " + number2 + " = " + quotient + "," +
-				number1 + " % " + number2 + " = " + mod + ",");
+		return (number1 + " + " + number2 + " = " + sum + ", " +
+				number1 + " * " + number2 + " = " + product + ", " +
+				number1 + " - " + number2 + " = " + difference + ", " +
+				number1 + " / " + number2 + " = " + quotient + ", " +
+				number1 + " % " + number2 + " = " + mod + ", ");
 		
 	}
 	public int larger()
@@ -65,6 +65,16 @@ public class TwoIntegers
 		{
 			return false;
 		}
-		
+	}
+	public boolean isMult()
+	{
+		if(number2 % number1 == 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }
